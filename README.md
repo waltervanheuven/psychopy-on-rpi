@@ -1,12 +1,18 @@
 # PsychoPy v2021.2.3 on a Raspberry Pi 4
 
-Below instructions to install native arm version of PsychoPy on a Raspberry Pi 4.
+Below are instructions to install PsychoPy on a Raspberry Pi 4.
 
-Tested with a Raspberry Pi 4 (4 Gb RAM) running a 64bit kernel.
+Tested with a Raspberry Pi 4 (4 Gb RAM) running a 64bit kernel and .
 
 ```txt
 # uname -a
 Linux rpi4 5.10.63-v8+ #1457 SMP PREEMPT Tue Sep 28 11:27:02 BST 2021 aarch64 GNU/Linux
+
+# lsb_release -a
+Distributor ID: Raspbian
+Description:    Raspbian GNU/Linux 10 (buster)
+Release:    10
+Codename:   buster
 ```
 
 ## 1. Install libraries
