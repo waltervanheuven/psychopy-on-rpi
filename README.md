@@ -86,4 +86,4 @@ pip uninstall psychtoolbox
 psychopy
 ```
 
-PsychoPy starts but many things do not work at the moment. Further testing needed.
+PsychoPy starts but many demos do not work at the moment. Further testing needed.
