@@ -1,8 +1,8 @@
 # PsychoPy v2021.2.3 on a Raspberry Pi 4
 
-Below are instructions to install PsychoPy on a Raspberry Pi 4.
+Below are instructions to install [PsychoPy](https://www.psychopy.org) on a [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/).
 
-Tested with a Raspberry Pi 4 (4 Gb RAM) running a 64bit kernel and .
+Tested with a Raspberry Pi 4 (4 Gb RAM) running a 64bit kernel.
 
 ```txt
 # uname -a
