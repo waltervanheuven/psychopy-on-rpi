@@ -6,7 +6,7 @@ Tested with a Raspberry Pi 4 (4 Gb RAM) running a 64bit kernel.
 
 ```txt
 # uname -a
-Linux rpi4 5.10.63-v8+ #1457 SMP PREEMPT Tue Sep 28 11:27:02 BST 2021 aarch64 GNU/Linux
+Linux rpi4 5.10.63-v8+ #1496 SMP PREEMPT Wed Dec 1 15:59:46 GMT 2021 aarch64 GNU/Linux
 
 # lsb_release -a
 Distributor ID: Raspbian
@@ -33,7 +33,8 @@ sudo apt-get install -y cmake pkg-config dpkg-dev build-essential && \
     gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav && \
     gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-pulseaudio && \
     libgstreamerd-3-dev && \
-    freeglut3 freeglut3-dev python3-wxgtk4.0 libgstreamer-plugins-base0.10-dev libghc-gtk3-dev libwxgtk3.0-gtk3-dev && \
+    freeglut3 freeglut3-dev libglew-dev && \
+    python3-wxgtk4.0 libgstreamer-plugins-base0.10-dev libghc-gtk3-dev libwxgtk3.0-gtk3-dev && \
     libegl1-mesa libwayland-egl1-mesa
 ```
 
@@ -53,7 +54,7 @@ pip install numpy scipy pandas
 
 ## 4. Install psychtoolbox
 
-psychtoolbox version 3.0.18.0
+psychtoolbox version 3.0.18.2
 
 ```sh
 pip install psychtoolbox
@@ -67,19 +68,47 @@ Latest version 4.1.1 fails to install. However, previous version works
 pip install wxpython==4.1.0
 ```
 
-## 6. Install other libraries
+## 6. Install `pyo` library from source
+
+[pyo](http://ajaxsoundstudio.com/software/pyo/) version: 1.0.4
+
+```sh
+brew install liblo libsndfile portaudio portmidi
+git clone https://github.com/belangeo/pyo.git
+cd pyo
+python setup.py install --use-double
+```
+
+## 7. Install PsychToolbox from source
+
+[psychtoolbox](http://psychtoolbox.org) version: 3.0.18.3 (BETA)
+
+Download latest [Psychtoolbox](https://github.com/Psychtoolbox-3/Psychtoolbox-3/releases) source.
+
+```sh
+wget https://github.com/Psychtoolbox-3/Psychtoolbox-3/archive/refs/tags/3.0.18.3.tar.gz
+
+tar -xvzf 3.0.18.3.tar.gz
+cd Psychtoolbox-3-3.0.18.3
+
+python setup.py install
+```
+
+## 8. Install other libraries
 
 ```sh
 pip install SpeechRecognition
 ```
 
-## 7. Install PsychoPy
+## 9. Install PsychoPy
+
+Installing PsychoPy and remaining dependencies.
 
 ```sh
 pip install psychopy
 ```
 
-Starting psychopy fails with an error. Possibly issues with psychtoolbox. Uninstalling psychtoolbox indeed fixes the error.
+Starting psychopy fails with an error. Seems related to psychtoolbox because uninstalling psychtoolbox fixes the error.
 
 ```sh
 pip uninstall psychtoolbox
