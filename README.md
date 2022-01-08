@@ -73,7 +73,6 @@ pip install wxpython==4.1.0
 [pyo](http://ajaxsoundstudio.com/software/pyo/) version: 1.0.4
 
 ```sh
-brew install liblo libsndfile portaudio portmidi
 git clone https://github.com/belangeo/pyo.git
 cd pyo
 python setup.py install --use-double
